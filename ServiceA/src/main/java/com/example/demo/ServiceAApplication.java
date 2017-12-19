@@ -16,11 +16,11 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class ServiceAApplication {
 
+	@Value("${my.testprop}")
+    String testprop;
+	
 	@Autowired
 	Environment environment;
-	
-	@Value("${testprop}")
-	private String testprop; 
 	
 	RabbitMessagingTemplate template;
 	

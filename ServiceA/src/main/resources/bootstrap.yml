@@ -1,3 +1,15 @@
-spring.application.name=SarevicA
-spring.cloud.config.uri=http://localhost:8888
-server.port=8090
+spring:
+  application:
+    name: ServiceA
+  cloud:
+    config:
+      name:ConfigServer
+      enabled:true
+      uri:http://localhost:8888
+
+server:
+  port: 8090
+
+management:
+  security:
+    enabled: false  
